@@ -18,14 +18,31 @@ const setDate = () => {
 const addNewTask = event => {
     event.preventDefault();
     const { value } = event.target.taskText;
-    if(!value) return;
+    if (!value) return;
+    // Crear el elemento de tarea
     const task = document.createElement('div');
     task.classList.add('task', 'roundBorder');
-    task.addEventListener('click', changeTaskState)
-    task.textContent = value;
+    // Agregar el texto de la tarea
+    const taskText = document.createElement('span');
+    taskText.textContent = value;
+    task.appendChild(taskText);
+    // Agregar el botón de eliminar
+const deleteButton = document.createElement('button');
+    deleteButton.classList.add('deleteButton', 'roundBorder');
+    deleteButton.textContent = 'X';
+    deleteButton.addEventListener('click', () => {
+    // Lógica para eliminar la tarea al hacer clic en el botón
+        task.remove();
+    });
+    task.appendChild(deleteButton);
+    // Agregar el evento para cambiar el estado al hacer clic en la tarea
+    task.addEventListener('click', changeTaskState);
+    // Agregar la tarea al contenedor
     tasksContainer.prepend(task);
-    event.target.reset();
+    // Limpiar el formula
+event.target.reset();
 };
+
 
 const changeTaskState = event => {
     event.target.classList.toggle('done');

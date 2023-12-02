@@ -1,6 +1,6 @@
 :root {
-    --primary: rgb(125, 187, 184);
-    --secondary: #D33F49;
+    --primary: rgb(111, 12, 114);
+    --secondary: rgb(19, 155, 155);
     --light: #fff;
     --dark: #000;
     --diabled: #e7e7e7;
@@ -19,12 +19,14 @@ body {
 
 .roundBorder {
     border-radius: 5px;
+    color: rgb(80, 3, 76);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .list {
     margin: 25px auto;
     padding: 25px;
-    background-color: rgb(89, 236, 205);
+    background-color: rgb(190, 143, 190);
     width: 100%;
     max-width: 350px;
 }
@@ -94,7 +96,7 @@ input:focus {
 }
 
 .orderButton {
-    background-color: rgb(216, 133, 212);
+    background-color: var(--secondary);
     color: var(--light);
 }
 
@@ -109,5 +111,10 @@ input:focus {
 .done {
     background-color: var(--diabled);
     text-decoration: line-through;
-    color: var(--diabled);
+    color: var(--dark);
+}
+
+.deleteButton {
+    background-color: rgb(6, 146, 146);
+    margin-inline: 90%;
 }
