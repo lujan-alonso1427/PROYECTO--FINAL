@@ -116,5 +116,7 @@ input:focus {
 
 .deleteButton {
     background-color: rgb(6, 146, 146);
-    margin-inline: 90%;
+    margin-inline: 92%;
+    border-radius: 50%;
+    border-color: rgb(6, 146, 146) ;
 }
